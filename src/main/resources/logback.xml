@@ -73,6 +73,12 @@
         <appender-ref ref="GATEWAY_FILE"/>
     </logger>
 
+    <!-- Explicit request hit logs from custom gateway filter -->
+    <logger name="com.forvmom.MomentForeverAPIGateway.filter.GatewayRequestLoggingFilter" level="INFO" additivity="false">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="GATEWAY_FILE"/>
+    </logger>
+
     <!-- WebFlux / Reactor Netty -->
     <logger name="org.springframework.web.reactive" level="INFO" additivity="false">
         <appender-ref ref="CONSOLE"/>
