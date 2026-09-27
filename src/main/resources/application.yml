@@ -220,6 +220,7 @@ jwt:
 springdoc:
   swagger-ui:
     path: /swagger-ui.html
+    persist-authorization: true
     urls:
       - name: Platform Service
         url: /api/platform/v3/api-docs
