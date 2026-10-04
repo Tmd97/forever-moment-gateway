@@ -69,7 +69,7 @@ public class JwtAuthenticationFilter implements GlobalFilter, Ordered {
         String username = jwtUtil.extractUsername(token);
         Long userId = jwtUtil.extractUserId(token);
         exchange = exchange.mutate()
-                .request(r -> r.header("X-User-Id", username)
+                .request(r -> r.header("X-User", username)
                         .header("X-User-Id", String.valueOf(userId))
                         .header("X-User-Roles", String.join(",", jwtUtil.extractRoles(token))))
                 .build();
